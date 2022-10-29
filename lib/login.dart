@@ -8,17 +8,20 @@ class LogIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 79, 218, 243),
         ),
         child: Container(
+          height: size.height * 0.8,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon( 
                 Icons.cancel,
@@ -30,12 +33,21 @@ class LogIn extends StatelessWidget {
               ),
               Center(
                 child: Container(
-                  color: Colors.blue,
+                  height: 50,
+                  width: 50,
+                 // color: Colors.blue,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                  ),
                 ), ),
                 SizedBox(
                   height: 80,
                 ),
-             
+             ElevatedButton(
+              
+              onPressed: (){ }, 
+              child: Text("Log In")),
             ],
           ),
         ),
